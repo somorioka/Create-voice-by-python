@@ -14,9 +14,7 @@ speech_key = "02672ae4422b4395bfe66e1868760f88"
 service_region = "eastus"
 
 def text_to_speech(text, index):
-    #出力先フォルダを指定したつもりだけど実際はこのpython_ttsに保存されてしまう。まあいいか。
-    #output_dir = os.path.expanduser("~/Desktop/python_tts_outputs")
-    #os.makedirs(output_dir, exist_ok=True)
+    #TODO: 出力先ファイルを指定したいが上手くできていない。現在はこのプロジェクトファイルに保存される。それでも問題はないが。
     output_dir = 'output_files'
     os.makedirs(output_dir, exist_ok=True)
     speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
